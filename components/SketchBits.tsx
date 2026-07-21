@@ -76,8 +76,8 @@ export function CircledMetric({
   label: string;
 }) {
   return (
-    <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-      <span className="relative inline-block px-6 py-2.5">
+    <div className="flex items-center gap-5">
+      <span className="relative inline-block shrink-0 px-6 py-2.5">
         <svg
           aria-hidden="true"
           className="absolute inset-0 h-full w-full text-pen"
@@ -103,7 +103,7 @@ export function CircledMetric({
           {value}
         </span>
       </span>
-      <span className="max-w-[36ch] font-mono text-[13px] leading-relaxed text-graphite">
+      <span className="min-w-0 flex-1 font-mono text-[13px] leading-relaxed text-graphite sm:max-w-[36ch]">
         {label}
       </span>
     </div>
