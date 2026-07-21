@@ -5,6 +5,7 @@ export const site = {
   email: "cochranbrian424@gmail.com",
   github: "https://github.com/cochran-brian",
   linkedin: "https://linkedin.com/in/cochran-brian",
+  resume: "/brian-cochran-resume.pdf",
   url: "https://briancochran.dev",
 };
 

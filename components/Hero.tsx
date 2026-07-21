@@ -92,6 +92,14 @@ export default function Hero() {
                 </span>
               </a>
               <a
+                href={site.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="sketch-alt border-pen px-6 py-3 font-mono text-sm text-pen transition-colors hover:bg-pen hover:text-paper"
+              >
+                Résumé ↗
+              </a>
+              <a
                 href={site.github}
                 target="_blank"
                 rel="noopener noreferrer"
