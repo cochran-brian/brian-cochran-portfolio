@@ -23,8 +23,8 @@ export default function About() {
             <p>
               I like owning things end to end. At each stop I&rsquo;ve taken
               work from ambiguous requirements to production, whether that was
-              a fraud-detection system, a CTO-approved design system, or an ML
-              pipeline serving real users.
+              a fraud-detection system, a mobile app used by tens of thousands,
+              or LLM-powered features serving real users.
             </p>
             <p>
               Off the clock I co-founded a campus outreach initiative, serve as

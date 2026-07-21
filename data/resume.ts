@@ -47,9 +47,9 @@ export const experience: Experience[] = [
     company: "iQor",
     role: "Software Engineering Intern",
     dates: "May 2025 – Aug 2025",
-    summary: "Led a design-system overhaul for an app with 40,000+ users.",
+    summary: "Shipped mobile UI work and test automation for an app with 40,000+ users.",
     points: [
-      "Led an end-to-end UI overhaul and design system for the iQorian app (40,000+ users), CTO-approved for rollout",
+      "Rebuilt core UI flows for the iQorian app (40,000+ users), improving consistency and usability across the mobile experience",
       "Built Appium test suites across mobile UI and backend APIs, adding automated regression coverage to CI/CD",
     ],
     stack: ["React Native", "Appium", "CI/CD"],
@@ -59,12 +59,12 @@ export const experience: Experience[] = [
     role: "Software Engineering Intern",
     dates: "Jun 2024 – Aug 2024",
     summary:
-      "Production ML pipelines at a startup later acquired for $100M+ by MyFitnessPal.",
+      "LLM-powered features at a startup later acquired for $100M+ by MyFitnessPal.",
     points: [
-      "Reworked the food-detection correction pipeline to parse natural-language edits, +20% accuracy in production",
+      "Reworked the food-detection correction pipeline to parse natural-language edits with cloud LLMs, +20% accuracy in production",
       "Migrated AWS Lambda from Python to TypeScript, cutting costs ~40%",
     ],
-    stack: ["TypeScript", "AWS Lambda", "Python"],
+    stack: ["TypeScript", "AWS Lambda", "LLMs"],
   },
 ];
 

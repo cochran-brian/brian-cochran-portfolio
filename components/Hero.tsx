@@ -25,8 +25,8 @@ export default function Hero() {
               <span className="marker text-ink">
                 fraud detection and payment SDKs
               </span>{" "}
-              at Synchrony, led a design system used by 40,000+ people at iQor,
-              and shipped production ML pipelines at Cal AI before its $100M
+              at Synchrony, shipped mobile features to 40,000+ people at iQor,
+              and built LLM-powered features at Cal AI before its $100M
               acquisition. I also build iOS apps my friends actually use.
             </p>
           </Reveal>
