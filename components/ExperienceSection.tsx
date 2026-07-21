@@ -20,7 +20,7 @@ export default function ExperienceSection() {
                 <div>
                   <h3 className="text-xl font-medium tracking-tight text-cream">
                     {job.company}
-                    <span className="text-muted"> — {job.role}</span>
+                    <span className="text-muted"> · {job.role}</span>
                   </h3>
                   <p className="mt-1 font-serif text-lg italic text-muted">
                     {job.summary}

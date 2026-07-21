@@ -16,22 +16,21 @@ export default function About() {
               I study{" "}
               <span className="text-cream">CS + Economics at Illinois</span>{" "}
               (3.91 GPA, Class of 2028), and I&rsquo;ve spent every semester
-              since freshman year shipping software somewhere real — a startup
+              since freshman year shipping software somewhere real: a startup
               that got acquired for $100M+, a BPO with 40,000 employees, and
               now a Fortune 200 bank.
             </p>
             <p>
-              The thread through all of it is{" "}
-              <em className="font-serif italic text-cream">connection</em>:
-              fraud detection as a graph problem, retrieval as a graph problem,
-              even growing a student org as a graph problem. I like systems
-              where the edges matter as much as the nodes.
+              I like owning things end to end. At each stop I&rsquo;ve taken
+              work from ambiguous requirements to production, whether that was
+              a fraud-detection system, a CTO-approved design system, or an ML
+              pipeline serving real users.
             </p>
             <p>
               Off the clock I co-founded a campus outreach initiative, serve as
-              VP of my fraternity, and build iOS apps that my friends actually
-              use — including one that makes you drink water before it unlocks
-              your doomscrolling.
+              VP of my fraternity, and build iOS apps with friends, including
+              one that makes you drink water before it unlocks your
+              doomscrolling.
             </p>
           </div>
         </Reveal>

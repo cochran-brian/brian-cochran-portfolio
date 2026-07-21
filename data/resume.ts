@@ -5,16 +5,8 @@ export const site = {
   email: "cochranbrian424@gmail.com",
   github: "https://github.com/cochran-brian",
   linkedin: "https://linkedin.com/in/cochran-brian",
-  availability: "Open to Summer 2027 SWE internships",
   url: "https://briancochran.dev",
 };
-
-export const stats = [
-  { value: "4", label: "internships since freshman year" },
-  { value: "$130M+", label: "annual fraud-prevention run rate my graph work feeds" },
-  { value: "40,000+", label: "users on a UI overhaul I led" },
-  { value: "3", label: "apps shipped end-to-end" },
-];
 
 export type Experience = {
   company: string;
@@ -29,7 +21,7 @@ export const experience: Experience[] = [
   {
     company: "Synchrony",
     role: "Software Engineering Intern",
-    dates: "Jan 2026 — Present",
+    dates: "Jan 2026 – Present",
     summary:
       "Fraud graphs, payment SDKs, and AI codegen agents at a Fortune 200 bank.",
     points: [
@@ -43,7 +35,7 @@ export const experience: Experience[] = [
   {
     company: "CUBE Consulting",
     role: "Business & Engineering Consultant",
-    dates: "Sep 2025 — Dec 2025",
+    dates: "Sep 2025 – Dec 2025",
     summary: "AI tutoring tools for a real client, demoed end-to-end.",
     points: [
       "Built an AI tutoring assistant (Speech-to-Text + OpenAI) surfacing real-time prompts from live tutoring dialogue",
@@ -54,7 +46,7 @@ export const experience: Experience[] = [
   {
     company: "iQor",
     role: "Software Engineering Intern",
-    dates: "May 2025 — Aug 2025",
+    dates: "May 2025 – Aug 2025",
     summary: "Led a design-system overhaul for an app with 40,000+ users.",
     points: [
       "Led an end-to-end UI overhaul and design system for the iQorian app (40,000+ users), CTO-approved for rollout",
@@ -65,7 +57,7 @@ export const experience: Experience[] = [
   {
     company: "Cal AI",
     role: "Software Engineering Intern",
-    dates: "Jun 2024 — Aug 2024",
+    dates: "Jun 2024 – Aug 2024",
     summary:
       "Production ML pipelines at a startup later acquired for $100M+ by MyFitnessPal.",
     points: [
@@ -91,7 +83,7 @@ export const projects: Project[] = [
     name: "Cascade",
     tagline: "Graph RAG for sentiment cascades",
     description:
-      "A retrieval system that models how sentiment ripples through connected entities — because flat vector search can't follow a chain of consequences. A Neo4j schema with 5 weighted relationship types and an N-hop Cypher retriever traces cascading impacts that embeddings alone miss.",
+      "A retrieval system that models how sentiment ripples through connected entities, built for the multi-hop questions flat vector search gets wrong. A Neo4j schema with 5 weighted relationship types and an N-hop Cypher retriever traces cascading impacts that embeddings alone miss.",
     metric: { value: "100%", label: "entity recall vs 76% for flat vector search" },
     points: [
       "LLM-as-judge eval harness where the graph won 75% of head-to-head multi-hop queries vs flat RAG",
@@ -105,26 +97,26 @@ export const projects: Project[] = [
     tagline: "Screen time you have to earn",
     description:
       "An iOS app that locks your distracting apps behind verified hydration. Apple DeviceActivity + FamilyControls gate screen time; a fail-closed computer-vision pipeline verifies the water is real; a deterministic, unit-tested economy engine handles caps, cooldowns, streaks, and multipliers.",
-    metric: { value: "fail-closed", label: "CV verification — no image storage, GDPR deletion" },
+    metric: { value: "fail-closed", label: "CV verification with no image storage and GDPR deletion" },
     points: [
       "On-device frames verified via Gemini vision, engineered to fail closed on false positives",
       "Privacy-first serverless backend with server-side keys",
     ],
     stack: ["React Native", "Expo", "Supabase", "Deno", "Gemini", "TypeScript"],
-    dates: "2026 — Present",
+    dates: "2026 – Present",
   },
   {
     name: "Liftype",
     tagline: "Local-first lifting, parsed from plain English",
     description:
-      "A lifting app that understands \"bench 3x8 at 185, felt easy\" — a regex fast-path handles the common cases and a Claude fallback catches the rest, so most logs never touch an LLM. Fully offline-capable with an outbox syncing to Supabase.",
+      "A lifting app that understands \"bench 3x8 at 185, felt easy\". A regex fast-path handles the common cases and a Claude fallback catches the rest, so most logs never touch an LLM. Fully offline-capable with an outbox syncing to Supabase.",
     metric: { value: "80%", label: "fewer LLM calls via the regex fast-path" },
     points: [
       "Local-first architecture: offline by default, outbox sync to Supabase",
       "Postgres + RLS + edge functions, LLM workout coaching, RevenueCat, OAuth",
     ],
     stack: ["Expo", "React Native", "TypeScript", "Supabase", "Claude"],
-    dates: "2026 — Present",
+    dates: "2026 – Present",
   },
 ];
 
@@ -139,19 +131,19 @@ export const leadership: Leadership[] = [
   {
     org: "Metanoia",
     role: "Co-Founder & President",
-    dates: "Mar 2026 — Present",
-    note: "Co-founded a Greek Life outreach initiative at UIUC — 200+ attendees at the inaugural event, with grassroots marketing and recruiting pipelines across chapters.",
+    dates: "Mar 2026 – Present",
+    note: "Co-founded a Greek Life outreach initiative at UIUC that drew 200+ attendees to its inaugural event, with grassroots marketing and recruiting pipelines across chapters.",
   },
   {
     org: "Sigma Alpha Epsilon, Illinois Beta",
     role: "Vice President & Small Group Leader",
-    dates: "Apr 2025 — Present",
+    dates: "Apr 2025 – Present",
     note: "Elected VP of a 100+ member chapter. Lead daily operations and facilitate a weekly small group with original personal-development curriculum.",
   },
   {
     org: "Phi Gamma Nu Business Fraternity",
     role: "Philanthropy & Wellness Committee",
-    dates: "Sep 2025 — Present",
+    dates: "Sep 2025 – Present",
     note: "Selected 1 of 30 from 900+ applicants. Raised $1,000 for Camp Kesem, supporting children of cancer patients.",
   },
 ];

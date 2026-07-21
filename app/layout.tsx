@@ -20,15 +20,16 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
 });
 
+const title = "Brian Cochran · Software Engineer";
 const description =
-  "CS + Economics at Illinois, Class of 2028. I build software around connections — fraud graphs at Synchrony, graph RAG systems, and apps shipped end-to-end.";
+  "CS + Economics at Illinois, Class of 2028. Software engineering intern at Synchrony, with past internships at iQor and Cal AI. Open to Summer 2027 internships.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: "Brian Cochran — Software Engineer",
+  title,
   description,
   openGraph: {
-    title: "Brian Cochran — Software Engineer",
+    title,
     description,
     url: site.url,
     siteName: "Brian Cochran",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Brian Cochran — Software Engineer",
+    title,
     description,
   },
 };

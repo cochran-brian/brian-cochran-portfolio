@@ -6,15 +6,13 @@ export default function Footer() {
     <footer id="contact" className="border-t border-line">
       <div className="mx-auto max-w-6xl px-6 py-28">
         <Reveal>
-          <p className="font-mono text-sm text-ember">05 — Contact</p>
+          <p className="font-mono text-sm text-ember">05 · Contact</p>
           <h2 className="mt-6 max-w-3xl text-4xl font-medium leading-[1.1] tracking-tight text-cream sm:text-6xl">
-            Let&rsquo;s add an edge
-            <br />
-            to the <em className="font-serif italic text-ember">graph.</em>
+            Let&rsquo;s <em className="font-serif italic text-ember">talk.</em>
           </h2>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            Recruiting for Summer 2027, or just want to talk graphs, mobile
-            apps, or campus startups? My inbox is open.
+            Recruiting for Summer 2027 internships, or just want to compare
+            notes on mobile apps and campus startups? My inbox is open.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
@@ -46,9 +44,7 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {site.name} · Champaign, IL
           </p>
-          <p>
-            Designed &amp; built with Next.js + Claude, deployed on Vercel
-          </p>
+          <p>Built with Next.js</p>
         </div>
       </div>
     </footer>
