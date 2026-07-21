@@ -46,7 +46,7 @@ export default function Footer() {
               href={site.resume}
               target="_blank"
               rel="noopener noreferrer"
-              className="sketch-alt border-pen px-6 py-3.5 font-mono text-sm text-pen transition-colors hover:bg-pen hover:text-paper"
+              className="sketch-alt sketch-pen px-6 py-3.5 font-mono text-sm text-pen transition-colors hover:bg-pen hover:text-paper"
             >
               Résumé ↗
             </a>

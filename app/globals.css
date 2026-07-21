@@ -73,6 +73,13 @@ section[id] {
   border-radius: 12px 5px 11px 6px / 6px 11px 5px 12px;
 }
 
+/* pen-blue border for .sketch/.sketch-alt buttons. Kept unlayered so it
+   overrides the shorthand `border` in those rules (a Tailwind border-color
+   utility can't, since layered utilities lose to unlayered rules). */
+.sketch-pen {
+  border-color: var(--pen);
+}
+
 /* ballpoint squiggle underline */
 .scribble {
   padding-bottom: 7px;
