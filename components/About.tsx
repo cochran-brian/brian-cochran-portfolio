@@ -11,10 +11,10 @@ export default function About() {
 
       <div className="grid gap-14 lg:grid-cols-[3fr_2fr]">
         <Reveal delay={80}>
-          <div className="space-y-5 text-lg leading-relaxed text-muted">
+          <div className="space-y-5 text-lg leading-relaxed text-graphite">
             <p>
               I study{" "}
-              <span className="text-cream">CS + Economics at Illinois</span>{" "}
+              <span className="text-ink">CS + Economics at Illinois</span>{" "}
               (3.91 GPA, Class of 2028), and I&rsquo;ve spent every semester
               since freshman year shipping software somewhere real: a startup
               that got acquired for $100M+, a BPO with 40,000 employees, and
@@ -39,14 +39,14 @@ export default function About() {
           <div className="space-y-8">
             {skills.map((s) => (
               <div key={s.group}>
-                <h3 className="mb-3 font-mono text-[13px] uppercase tracking-widest text-faint">
+                <h3 className="mb-3 font-hand text-2xl text-graphite">
                   {s.group}
                 </h3>
                 <ul className="flex flex-wrap gap-2">
                   {s.items.map((item) => (
                     <li
                       key={item}
-                      className="rounded-md border border-line bg-surface px-2.5 py-1 font-mono text-[13px] text-muted"
+                      className="sketch-chip bg-card px-2.5 py-1 font-mono text-[13px] text-graphite"
                     >
                       {item}
                     </li>

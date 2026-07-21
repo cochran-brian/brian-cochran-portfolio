@@ -1,32 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #0b0b0c;
-  --surface: #121214;
-  --raise: #17171a;
-  --line: rgba(237, 234, 228, 0.09);
-  --cream: #ece9e2;
-  --muted: #8f8d87;
-  --faint: #55534e;
-  --ember: #ff8a3b;
-  --ember-dim: rgba(255, 138, 59, 0.55);
-  --ember-soft: rgba(255, 138, 59, 0.1);
+  --paper: #f7f4ec;
+  --card: #fffdf7;
+  --ink: #26221a;
+  --graphite: #6d6759;
+  --faint: #a19a8a;
+  --line: #ddd6c6;
+  --pen: #2b4fd8;
+  --pen-soft: rgba(43, 79, 216, 0.08);
+  --marker: rgba(255, 222, 89, 0.55);
 }
 
 @theme inline {
+  --color-paper: var(--paper);
+  --color-card: var(--card);
   --color-ink: var(--ink);
-  --color-surface: var(--surface);
-  --color-raise: var(--raise);
-  --color-line: var(--line);
-  --color-cream: var(--cream);
-  --color-muted: var(--muted);
+  --color-graphite: var(--graphite);
   --color-faint: var(--faint);
-  --color-ember: var(--ember);
-  --color-ember-dim: var(--ember-dim);
-  --color-ember-soft: var(--ember-soft);
+  --color-line: var(--line);
+  --color-pen: var(--pen);
+  --color-pen-soft: var(--pen-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-instrument-serif);
+  --font-hand: var(--font-caveat);
 }
 
 html {
@@ -34,26 +31,75 @@ html {
 }
 
 body {
-  background: var(--ink);
-  color: var(--cream);
+  position: relative;
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
+/* faint paper-grain texture over the whole page */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.55 0 0 0 0 0.53 0 0 0 0 0.47 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 ::selection {
-  background: var(--ember);
-  color: var(--ink);
+  background: var(--pen);
+  color: var(--paper);
 }
 
 section[id] {
   scroll-margin-top: 4.5rem;
 }
 
-/* thin, unobtrusive scrollbar on the dark canvas */
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--faint) transparent;
+}
+
+/* hand-drawn wobbly borders */
+.sketch {
+  border: 1.5px solid var(--ink);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+.sketch-alt {
+  border: 1.5px solid var(--ink);
+  border-radius: 15px 225px 15px 255px / 255px 15px 225px 15px;
+}
+
+.sketch-chip {
+  border: 1px solid var(--faint);
+  border-radius: 12px 5px 11px 6px / 6px 11px 5px 12px;
+}
+
+/* ballpoint squiggle underline */
+.scribble {
+  padding-bottom: 7px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='8' viewBox='0 0 80 8'%3E%3Cpath d='M2 5 C 10 1, 18 7, 26 4 S 42 2, 50 5 S 66 7, 78 3' fill='none' stroke='%232b4fd8' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 80px 8px;
+}
+
+/* yellow highlighter swipe */
+.marker {
+  background: linear-gradient(
+    100deg,
+    transparent 0.5%,
+    var(--marker) 3.5%,
+    var(--marker) 96%,
+    transparent 99%
+  );
+  padding: 0 0.08em;
 }
 
 @media (prefers-reduced-motion: reduce) {

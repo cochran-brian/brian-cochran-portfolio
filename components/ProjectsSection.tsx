@@ -9,18 +9,27 @@ export default function ProjectsSection() {
         <SectionHeading index="03" title="Projects" />
       </Reveal>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-8 lg:grid-cols-2">
         {projects.map((p, i) => (
           <Reveal
             key={p.name}
             delay={i * 80}
             className={i === 0 ? "lg:col-span-2" : ""}
           >
-            <article className="group relative flex h-full flex-col rounded-2xl border border-line bg-surface p-8 transition-colors duration-300 hover:border-ember/40 sm:p-10">
+            <article
+              className={`${
+                i % 2 === 0 ? "sketch rotate-[0.3deg]" : "sketch-alt -rotate-[0.3deg]"
+              } group relative flex h-full flex-col bg-card p-8 transition-transform duration-300 hover:rotate-0 hover:shadow-[5px_6px_0_rgba(38,34,26,0.1)] sm:p-10`}
+            >
+              {i === 0 && (
+                <span className="absolute -top-5 right-8 font-hand text-2xl text-pen">
+                  my favorite one ↓
+                </span>
+              )}
               <div className="flex items-baseline justify-between gap-4">
-                <h3 className="text-3xl font-medium tracking-tight text-cream">
+                <h3 className="text-3xl font-semibold tracking-tight text-ink">
                   {p.name}
-                  <span className="ml-3 font-serif text-xl italic text-muted">
+                  <span className="ml-3 font-hand text-2xl font-normal text-graphite">
                     {p.tagline}
                   </span>
                 </h3>
@@ -29,16 +38,16 @@ export default function ProjectsSection() {
                 </span>
               </div>
 
-              <p className="mt-5 max-w-3xl leading-relaxed text-muted">
+              <p className="mt-5 max-w-3xl leading-relaxed text-graphite">
                 {p.description}
               </p>
 
               <div className="mt-8 flex flex-1 flex-col justify-end gap-8">
-                <div className="rounded-xl border border-line bg-ink/60 p-5">
-                  <div className="text-4xl font-medium tracking-tight text-ember">
+                <div className="sketch-chip bg-paper p-5">
+                  <div className="text-4xl font-semibold tracking-tight text-pen">
                     {p.metric.value}
                   </div>
-                  <div className="mt-1.5 font-mono text-[13px] leading-relaxed text-muted">
+                  <div className="mt-1.5 font-mono text-[13px] leading-relaxed text-graphite">
                     {p.metric.label}
                   </div>
                 </div>
@@ -47,19 +56,19 @@ export default function ProjectsSection() {
                   {p.points.map((pt) => (
                     <li
                       key={pt}
-                      className="flex gap-3 text-[15px] leading-relaxed text-muted"
+                      className="flex gap-3 text-[15px] leading-relaxed text-graphite"
                     >
-                      <span className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-ember-dim" />
+                      <span className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-pen/60" />
                       {pt}
                     </li>
                   ))}
                 </ul>
 
-                <ul className="flex flex-wrap gap-2 border-t border-line pt-6">
+                <ul className="flex flex-wrap gap-2 border-t border-dashed border-line pt-6">
                   {p.stack.map((t) => (
                     <li
                       key={t}
-                      className="rounded-md border border-line px-2 py-0.5 font-mono text-xs text-faint"
+                      className="sketch-chip px-2 py-0.5 font-mono text-xs text-faint"
                     >
                       {t}
                     </li>
@@ -72,16 +81,17 @@ export default function ProjectsSection() {
       </div>
 
       <Reveal delay={120}>
-        <p className="mt-10 text-center font-mono text-[13px] text-faint">
-          More on{" "}
+        <p className="mt-12 text-center font-hand text-2xl text-graphite">
+          more on{" "}
           <a
             href={site.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted underline decoration-line underline-offset-4 transition-colors hover:text-ember"
+            className="text-pen underline decoration-wavy underline-offset-4 transition-colors hover:text-ink"
           >
-            GitHub ↗
-          </a>
+            GitHub
+          </a>{" "}
+          ↗
         </p>
       </Reveal>
     </section>
