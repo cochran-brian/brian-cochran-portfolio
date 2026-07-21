@@ -33,20 +33,20 @@ export default function ProjectsSection() {
                     0{i + 1}
                   </span>
                   {p.name}
-                  <span className="ml-3 font-hand text-2xl font-normal text-graphite">
-                    {p.tagline}
-                  </span>
                 </h3>
                 <span className="shrink-0 font-mono text-[13px] text-faint">
                   {p.dates}
                 </span>
               </div>
+              <p className="mt-1 font-hand text-2xl text-graphite">
+                {p.tagline}
+              </p>
 
-              <p className="mt-5 max-w-3xl leading-relaxed text-graphite">
+              <p className="mt-4 max-w-3xl leading-relaxed text-graphite">
                 {p.description}
               </p>
 
-              <div className="mt-8 flex flex-1 flex-col justify-end gap-7">
+              <div className="mt-7 space-y-6">
                 <CircledMetric value={p.metric.value} label={p.metric.label} />
 
                 <ul className="space-y-2.5">
@@ -54,13 +54,17 @@ export default function ProjectsSection() {
                     <CheckItem key={pt} text={pt} />
                   ))}
                 </ul>
-
-                <ul className="flex flex-wrap gap-2 border-t border-dashed border-line pt-6">
-                  {p.stack.map((t, j) => (
-                    <Chip key={t} label={t} i={j} />
-                  ))}
-                </ul>
               </div>
+
+              {/* flexible spacer so the chip footer pins to the card bottom
+                  without opening a gap higher up */}
+              <div className="min-h-6 flex-1" />
+
+              <ul className="flex flex-wrap gap-2 border-t border-dashed border-line pt-6">
+                {p.stack.map((t, j) => (
+                  <Chip key={t} label={t} i={j} />
+                ))}
+              </ul>
             </article>
           </Reveal>
         ))}
