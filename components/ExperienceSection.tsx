@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import { CheckItem, Chip } from "./SketchBits";
 import { experience } from "@/data/resume";
 
 export default function ExperienceSection() {
@@ -46,23 +47,12 @@ export default function ExperienceSection() {
                   </p>
                   <ul className="mt-4 space-y-2.5">
                     {job.points.map((p) => (
-                      <li
-                        key={p}
-                        className="flex gap-3 text-[15px] leading-relaxed text-graphite"
-                      >
-                        <span className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-pen/60" />
-                        {p}
-                      </li>
+                      <CheckItem key={p} text={p} />
                     ))}
                   </ul>
-                  <ul className="mt-5 flex flex-wrap gap-2">
-                    {job.stack.map((t) => (
-                      <li
-                        key={t}
-                        className="sketch-chip px-2 py-0.5 font-mono text-xs text-faint transition-colors group-hover:text-graphite"
-                      >
-                        {t}
-                      </li>
+                  <ul className="mt-5 flex flex-wrap gap-2 border-t border-dashed border-line pt-5">
+                    {job.stack.map((t, j) => (
+                      <Chip key={t} label={t} i={j} />
                     ))}
                   </ul>
                 </article>

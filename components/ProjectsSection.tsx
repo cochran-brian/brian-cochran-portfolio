@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import { CheckItem, Chip, CircledMetric } from "./SketchBits";
 import { projects, site } from "@/data/resume";
 
 export default function ProjectsSection() {
@@ -28,6 +29,9 @@ export default function ProjectsSection() {
               )}
               <div className="flex items-baseline justify-between gap-4">
                 <h3 className="text-3xl font-semibold tracking-tight text-ink">
+                  <span className="mr-3 font-mono text-[13px] font-normal text-pen">
+                    0{i + 1}
+                  </span>
                   {p.name}
                   <span className="ml-3 font-hand text-2xl font-normal text-graphite">
                     {p.tagline}
@@ -42,36 +46,18 @@ export default function ProjectsSection() {
                 {p.description}
               </p>
 
-              <div className="mt-8 flex flex-1 flex-col justify-end gap-8">
-                <div className="sketch-chip bg-paper p-5">
-                  <div className="text-4xl font-semibold tracking-tight text-pen">
-                    {p.metric.value}
-                  </div>
-                  <div className="mt-1.5 font-mono text-[13px] leading-relaxed text-graphite">
-                    {p.metric.label}
-                  </div>
-                </div>
+              <div className="mt-8 flex flex-1 flex-col justify-end gap-7">
+                <CircledMetric value={p.metric.value} label={p.metric.label} />
 
-                <ul className="space-y-2">
+                <ul className="space-y-2.5">
                   {p.points.map((pt) => (
-                    <li
-                      key={pt}
-                      className="flex gap-3 text-[15px] leading-relaxed text-graphite"
-                    >
-                      <span className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-pen/60" />
-                      {pt}
-                    </li>
+                    <CheckItem key={pt} text={pt} />
                   ))}
                 </ul>
 
                 <ul className="flex flex-wrap gap-2 border-t border-dashed border-line pt-6">
-                  {p.stack.map((t) => (
-                    <li
-                      key={t}
-                      className="sketch-chip px-2 py-0.5 font-mono text-xs text-faint"
-                    >
-                      {t}
-                    </li>
+                  {p.stack.map((t, j) => (
+                    <Chip key={t} label={t} i={j} />
                   ))}
                 </ul>
               </div>
