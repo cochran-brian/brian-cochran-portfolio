@@ -3,7 +3,10 @@ import { site } from "@/data/resume";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="border-t border-dashed border-line">
+    <footer
+      id="contact"
+      className="relative z-10 border-t border-dashed border-line bg-paper"
+    >
       <div className="mx-auto max-w-6xl px-6 py-28">
         <Reveal>
           <p className="font-mono text-sm text-pen">05 · Contact</p>

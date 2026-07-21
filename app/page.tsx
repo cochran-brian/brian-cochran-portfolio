@@ -1,4 +1,5 @@
 import Nav from "@/components/Nav";
+import Doodles from "@/components/Doodles";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import ExperienceSection from "@/components/ExperienceSection";
@@ -10,14 +11,17 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <main>
-        <Hero />
-        <About />
-        <ExperienceSection />
-        <ProjectsSection />
-        <LeadershipSection />
-      </main>
-      <Footer />
+      <div className="relative">
+        <Doodles />
+        <main className="relative z-10">
+          <Hero />
+          <About />
+          <ExperienceSection />
+          <ProjectsSection />
+          <LeadershipSection />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

@@ -22,7 +22,7 @@ export default function ProjectsSection() {
               } group relative flex h-full flex-col bg-card p-8 transition-transform duration-300 hover:rotate-0 hover:shadow-[5px_6px_0_rgba(38,34,26,0.1)] sm:p-10`}
             >
               {i === 0 && (
-                <span className="absolute -top-5 right-8 font-hand text-2xl text-pen">
+                <span className="absolute -top-8 right-6 z-10 -rotate-3 bg-paper px-2 font-hand text-2xl text-pen sm:-right-3 sm:-top-9">
                   my favorite one ↓
                 </span>
               )}
