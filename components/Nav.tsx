@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { site } from "@/data/resume";
 
 const links = [
   { href: "#about", label: "About" },
@@ -47,8 +46,10 @@ export default function Nav() {
             </a>
           ))}
         </div>
+        {/* #contact instead of mailto: — always responds even with no mail
+            client configured; the contact section carries the email button */}
         <a
-          href={`mailto:${site.email}`}
+          href="#contact"
           className="sketch-chip px-4 py-1.5 font-mono text-[13px] text-ink transition-colors hover:border-pen hover:text-pen"
         >
           Say hi
