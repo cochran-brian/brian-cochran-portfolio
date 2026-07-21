@@ -190,7 +190,7 @@ export default function AboutStory() {
             </div>
 
             {/* card stack */}
-            <div className="relative h-[420px] max-w-2xl sm:h-[380px]">
+            <div className="relative h-[476px] max-w-2xl sm:h-[392px]">
               {chapters.map((c, i) => (
                 <div
                   key={c.title}
@@ -225,26 +225,31 @@ function Card({
   chapter: Chapter;
   counter?: string;
 }) {
+  // Everything inside the card is a multiple of the 28px rule spacing
+  // (padding 28, heading 56 = 2 rows, paragraphs 28, gaps 28) so text
+  // lands on the printed lines instead of drifting across them.
   return (
-    <article className="sketch ruled-card relative flex h-full flex-col bg-card px-8 pt-7 pb-6 shadow-[5px_6px_0_rgba(38,34,26,0.1)] sm:px-14">
+    <article className="sketch ruled-card relative flex h-full flex-col bg-card pt-7 pb-7 pl-16 pr-7 shadow-[5px_6px_0_rgba(38,34,26,0.1)] sm:pl-20 sm:pr-12">
       <span
         aria-hidden="true"
         className="absolute -top-3 left-1/2 h-7 w-24 -translate-x-1/2 -rotate-2 border border-ink/10 bg-[rgba(240,225,170,0.55)] shadow-sm"
       />
       <div className="flex items-baseline justify-between gap-4">
-        <h3 className="font-hand text-4xl text-pen">{chapter.title}</h3>
+        <h3 className="font-hand text-4xl leading-[56px] text-pen">
+          {chapter.title}
+        </h3>
         {counter && (
           <span className="font-mono text-[13px] text-faint">{counter}</span>
         )}
       </div>
-      <div className="mt-4 space-y-3">
+      <div className="space-y-7">
         {chapter.body.map((p) => (
           <p key={p} className="text-[15px] leading-[28px] text-graphite">
             {p}
           </p>
         ))}
       </div>
-      <p className="mt-auto pt-4 text-right font-hand text-xl text-faint">
+      <p className="mt-auto text-right font-hand text-xl leading-[28px] text-faint">
         {chapter.aside}
       </p>
     </article>

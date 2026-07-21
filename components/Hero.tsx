@@ -70,11 +70,11 @@ export default function Hero() {
 
           <Reveal delay={160}>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-graphite">
-              Four internships in, I&rsquo;ve worked on{" "}
+              Three internships in, I&rsquo;ve worked on{" "}
               <span className="marker marker-draw text-ink">
                 fraud detection and payment SDKs
               </span>{" "}
-              at Synchrony, shipped mobile features to 40,000+ people at iQor,
+              at Synchrony, built mobile features for 40,000+ people at iQor,
               and built LLM-powered features at Cal AI before its $100M
               acquisition. I also build iOS apps my friends actually use.
             </p>
